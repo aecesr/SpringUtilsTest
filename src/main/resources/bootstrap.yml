@@ -1,0 +1,35 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: pdes-ams-sys-chl-test
+  cloud:
+    config:
+      name: ${spring.application.name},database,redis,rabbitMQ   #不需要.yml
+      profile: ${PROFILE:dev}
+      discovery:
+        enabled: true #设置服务发现
+        service-id: pdes-config
+      username: ${CONFIG_USER:admin}
+      password: ${CONFIG_PWD:pde888}
+      label: main
+eureka:
+  instance:
+    prefer-ip-address: true   #使用ip地址
+    ip-address: ${HOST:10.20.1.181}
+    instance-id: ${spring.application.name}:${HOST:10.20.1.181}:${spring.application.instance_id:${server.port}}
+    lease-expiration-duration-in-seconds: 7   #发呆时间，即服务续约到期时间
+    lease-renewal-interval-in-seconds: 5      #表示eureka client发送心跳给server端的频率
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URLS:http://10.20.40.104:9901/eureka}
+    registry-fetch-interval-seconds: 5  #表示eureka client间隔多久去拉取服务注册信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+#logging:
+#  level:
+#    com.pde.pdes.sys.api: debug
+#    com.pde.pdes.sys.mapper.*: debug
