@@ -8,9 +8,9 @@ package com.chl.springdemo.model;
  */
 public enum TencentSecret {
 
-    SECRET_ID("AKID440vMmCa5auEmL6oP5pWAi6QqI0nXBlG"),
+    SECRET_ID(""),
 
-    SECRET_KEY("sgP5YzPvXAiU5d5FGC1FPVWOzZzVxHUm");
+    SECRET_KEY("");
 
 
     public final String value;

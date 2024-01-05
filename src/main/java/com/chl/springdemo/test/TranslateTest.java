@@ -9,7 +9,7 @@ import java.util.function.Consumer;
  * @version 1.0
  * @Author caohl
  * @Date 2023/12/14 9:47
- * @注释
+ * @注释 国际化
  */
 public class TranslateTest {
 
