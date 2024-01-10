@@ -21,14 +21,20 @@ public class ExcelModel {
     @Excel(name = "编号")
     private String bh ="";
 
-    @Excel(name = "字段中文名")
+    @Excel(name = "元数据中文名称")
     private String zdzw="";
 
-    @Excel(name = "字段英文名")
+    @Excel(name = "元数据中文名称1")
+    private String zdzw1="";
+
+    @Excel(name = "元数据英文名称")
     private String zden="";
 
     @Excel(name = "字段名")
     private String zdm="";
+
+    @Excel(name = "字段属性")
+    private String zdsx="";
 
     @Excel(name = "约束性" , importFormat = "必选_0;可选_1;条件选_2")
     private String ysx="";
@@ -39,50 +45,27 @@ public class ExcelModel {
     @Excel(name = "数据类型")
     private String sjlx="";
 
-
     @Excel(name = "字段长度")
-    private String zdcd="0";
+    private Integer zdcd;
 
-    @Excel(name = "列表显示宽度")
-    private String lbxs="";
+    @Excel(name = "可重复性")
+    private String kcfx="";
 
-    @Excel(name = "卡片显示宽度")
-    private String kpxs="";
-
-    @Excel(name = "数据库字段长度")
-    private String sjkzdcd="";
-
-    @Excel(name = "属性")
-    private String zdsx="";
+    @Excel(name = "值域")
+    private String zy="";
 
     @Excel(name = "缺省值")
     private String defaultValue="";
 
-    @Excel(name = "值域")
-    private String zy="";
-    @Excel(name = "可重复性")
-    private String kcfx="";
+    @Excel(name = "应用层级")
+    private String yycj="";
 
-    @Excel(name = "文件目录")
-    private String wjml="";
-
-    @Excel(name = "案卷目录")
-    private String ajml="";
-
-    @Excel(name = "卷内目录")
-    private String jnml="";
-    @Excel(name = "原文")
-    private String yw="";
-
-    @Excel(name = "立档单位必选")
-    private String lddwbx="";
-
-    @Excel(name = "档案馆必选")
-    private String dagbx="";
-    @Excel(name = "捕获方式")
-    private String bhfs="";
-    @Excel(name = "备注")
-    private String bz="";
+    @Excel(name = "对应T46编号")
+    private String t46="";
+    @Excel(name = "对应T48编号")
+    private String t48="";
+    @Excel(name = "是否动态字段")
+    private String isdt="";
 
 
 }
